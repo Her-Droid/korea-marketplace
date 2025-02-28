@@ -7,7 +7,14 @@ import 'package:korean_marketplace/core/uikit/themes/text.dart';
 
 @RoutePage()
 class DetailProfilePage extends StatelessWidget {
-  const DetailProfilePage({super.key});
+  final String image;
+  final String name;
+
+  const DetailProfilePage({
+    super.key,
+    required this.image,
+    required this.name,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -47,11 +54,11 @@ class DetailProfilePage extends StatelessWidget {
                   height: 104.h,
                   width: 104.w,
                   child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/profile_1.png'),
+                    backgroundImage: AssetImage(image),
                   ),
                 ),
                 SizedBox(height: 4.h),
-                Text("Name01", style: UiKitTextStyle.textTheme.titleLarge),
+                Text(name, style: UiKitTextStyle.textTheme.titleLarge),
                 SizedBox(height: 4.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -198,15 +205,14 @@ class DetailProfilePage extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 16.h),
                   child: Row(
                     children: [
-                      const CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/profile_1.png'),
+                      CircleAvatar(
+                        backgroundImage: AssetImage(image),
                       ),
                       SizedBox(width: 8.w),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Name01",
+                          Text(name,
                               style: UiKitTextStyle.textTheme.titleSmall),
                           Row(
                             children: [

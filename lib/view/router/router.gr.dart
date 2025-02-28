@@ -9,6 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i7;
+import 'package:flutter/material.dart' as _i8;
 import 'package:korean_marketplace/view/pages/category_page.dart' as _i1;
 import 'package:korean_marketplace/view/pages/community_page.dart' as _i2;
 import 'package:korean_marketplace/view/pages/detail_profile_page.dart' as _i3;
@@ -56,10 +57,19 @@ class CommunityRoute extends _i7.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.DetailProfilePage]
-class DetailProfileRoute extends _i7.PageRouteInfo<void> {
-  const DetailProfileRoute({List<_i7.PageRouteInfo>? children})
-      : super(
+class DetailProfileRoute extends _i7.PageRouteInfo<DetailProfileRouteArgs> {
+  DetailProfileRoute({
+    _i8.Key? key,
+    required String image,
+    required String name,
+    List<_i7.PageRouteInfo>? children,
+  }) : super(
           DetailProfileRoute.name,
+          args: DetailProfileRouteArgs(
+            key: key,
+            image: image,
+            name: name,
+          ),
           initialChildren: children,
         );
 
@@ -68,9 +78,33 @@ class DetailProfileRoute extends _i7.PageRouteInfo<void> {
   static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
-      return const _i3.DetailProfilePage();
+      final args = data.argsAs<DetailProfileRouteArgs>();
+      return _i3.DetailProfilePage(
+        key: args.key,
+        image: args.image,
+        name: args.name,
+      );
     },
   );
+}
+
+class DetailProfileRouteArgs {
+  const DetailProfileRouteArgs({
+    this.key,
+    required this.image,
+    required this.name,
+  });
+
+  final _i8.Key? key;
+
+  final String image;
+
+  final String name;
+
+  @override
+  String toString() {
+    return 'DetailProfileRouteArgs{key: $key, image: $image, name: $name}';
+  }
 }
 
 /// generated route for

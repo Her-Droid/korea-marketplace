@@ -54,7 +54,7 @@ final List<Map<String, dynamic>> reviewers = List.generate(
     10,
     (index) => {
           'image': 'assets/images/profile_${index + 1}.png',
-          'name': 'Name${index + 1 > 9 ? "" : "0"}${index + 1}',
+          'name': 'Name0${index + 1}',
         });
 
 @RoutePage()
@@ -274,7 +274,12 @@ class _HomePageState extends State<HomePage> {
               Map<String, dynamic> reviewer = entry.value;
               return GestureDetector(
                 onTap: () {
-                  AutoRouter.of(context).push(const DetailProfileRoute());
+                  AutoRouter.of(context).push(
+                    DetailProfileRoute(
+                      image: reviewer['image'],
+                      name: reviewer['name'],
+                    ),
+                  );
                 },
                 child: Padding(
                   padding: EdgeInsets.only(left: 16.w),
