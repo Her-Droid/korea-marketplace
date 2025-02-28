@@ -21,7 +21,7 @@ Before you can run this Flutter project, ensure you have the following installed
 Open your terminal and clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/your-flutter-project.git
+git clone https://github.com/Her-Droid/korea-marketplace.git
 cd your-flutter-project
 ```
 
@@ -132,9 +132,6 @@ Contributions are welcome! Please follow these steps to contribute:
 4. Push your changes to your fork.
 5. Submit a pull request to the main repository.
 
-## License
-
-This project is licensed under the MIT License.
 
 ## Project Version
 
