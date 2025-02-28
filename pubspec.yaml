@@ -1,0 +1,48 @@
+name: korean_marketplace
+description: "A new Flutter project."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  #image management
+  flutter_svg: ^2.0.10+1
+
+  #ui
+  flutter_screenutil: ^5.9.0
+  smooth_page_indicator: ^1.2.1
+
+  #router
+  auto_route: ^9.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+  auto_route_generator: ^9.0.0
+  build_runner:
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icons/
+    - assets/images/
+
+  fonts:
+    - family: "NotoSans"
+      fonts:
+        - asset: assets/fonts/NotoSans_Light.ttf
+        - asset: assets/fonts/NotoSans_Regular.ttf
+        - asset: assets/fonts/NotoSans_Medium.ttf
+        - asset: assets/fonts/NotoSans_SemiBold.ttf
+        - asset: assets/fonts/NotoSans_Bold.ttf
