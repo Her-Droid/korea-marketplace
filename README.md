@@ -21,7 +21,7 @@ Before you can run this Flutter project, ensure you have the following installed
 Open your terminal and clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/your-flutter-project.git
+git clone https://github.com/Her-Droid/korea-marketplace.git
 cd your-flutter-project
 ```
 
